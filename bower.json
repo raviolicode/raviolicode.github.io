@@ -1,0 +1,9 @@
+{
+  "name": "pure_font-awesome_modernizr",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "font-awesome": "~v4.0.3",
+    "pure": "*"
+  }
+}
