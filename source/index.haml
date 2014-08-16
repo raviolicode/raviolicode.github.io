@@ -19,7 +19,7 @@ title: Lucia Escanellas
         Or you can jump to my #{link_to 'contact', '#info'} info.
 
 -# %section#info
-.ribbon
+#aboutme.ribbon
   .pure-g.l-box-lrg
     .pure-u-1
       %h1 ~/about_me
@@ -34,50 +34,54 @@ title: Lucia Escanellas
       %p Started out as a Linux Sysadmin, and then a computer networks teacher at the University.
       %p I also worked as a .NET Developer / Analyst. Then I discovered Ruby, and I have been working on Web Development ever since :)</p>
 
-.content
-  .content-head
-    %h1 ~/my_interests
-
-    .pure-g
-      .pure-u-1.pure-u-sm-1-2.interest
+#interests
+  .pure-g.l-box-lrg
+    .pure-u-1
+      %h1 ~/my_interests
+    .pure-u-1.pure-u-sm-1-2.interest
+      .title
         %h2
           Open Data
           %br
             &Digital
-          %br
             Goverment
-        .content
+      .content
+        .info
           %p Info about DATA
 
-      .pure-u-1.pure-u-sm-1-2.interest
+    .pure-u-1.pure-u-sm-1-2.interest
+      .title
         %h2
           Teaching
           %br
             & Work
-          %br
             shops
-        .content
+      .content
+        .info
           %ul
             %li Rails Bridge 2012
             %li Rails Girls Montevideo 2014
 
-      .pure-u-1.pure-u-sm-1-2.interest
+    .pure-u-1.pure-u-sm-1-2.interest
+      .title
         %h2
           Hacka
           %br
             thons
-          %br
-            Open Source
-        .content
+            &amp;OpenSource
+      .content
+        .info
           %ul
             %li Upsert
             %li Desarrollando Latinoamérica
 
-      .pure-u-1.pure-u-sm-1-2.interest
+    .pure-u-1.pure-u-sm-1-2.interest
+      .title
         %h2
           Travels
           %br
             Creatures
-          %br
             &Culture
-        %p Some other stuff
+      .content
+        .info
+          %p Some other stuff

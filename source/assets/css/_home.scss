@@ -40,7 +40,7 @@ a {
 }
 
 .l-box-lrg {
-  padding: 2em;
+  padding: 3em;
   // border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
@@ -54,7 +54,7 @@ a {
  */
 
 .splash-container {
-  background: $blue;
+  background: $lightgray;
   border-bottom: 10px solid $red;
 }
 
@@ -87,7 +87,78 @@ a {
     font-weight: 300;
   }
 
-  .l-box-lrg {
-    padding: 3em;
+}
+
+
+/*
+ * -- INTERESTS STYLES --
+ * 
+ */
+
+#interests {
+  background: $lightgray;
+}
+
+.interest {
+  background: white;
+  position: relative;
+  width: 490px;
+  height: 250px;
+  overflow: hidden;
+
+  h2 {
+    color: $mediumgray;
+    text-transform: uppercase;
+    font-size: 5.6em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 0.8em;
+    margin: 0;
+
+    br {
+      line-height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &:hover .title {
+    h2 {
+      color: $darkgray;
+      z-index: 0;
+    }
+    -webkit-transform: translateX(-280px);
+  }
+
+  &:hover .content {
+    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transform: skew(330deg) translateX(120px) translateY(-10px);
+    z-index: 0;
+    background-color: white;
+  }
+
+  &:hover .info {
+    -webkit-transform: skew(-330deg);
+    padding: 20px 0 0 20px;
+  }
+
+  .title {
+    background: white;
+    position: absolute;
+    width: 490px;
+    height: 250px;
+    top: 0px;
+    -webkit-transition: -webkit-transform 300ms;
+  }
+
+  .content {
+    z-index: -9999;
+    overflow:hidden;
+    backround: white;
+    border-left: solid 10px $red;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    -webkit-transform: skew(330deg) translateX(600px) translateY(-10px);
   }
 }
