@@ -20,7 +20,7 @@
 
 .l-box-lrg {
   padding: 2em;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  // border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .is-center {
@@ -37,5 +37,10 @@
   text-align: center;
   width: 90%;
   margin: auto;
+
+  img {
+    height: 200px;
+    border-radius: 100px;
+  }
 }
 

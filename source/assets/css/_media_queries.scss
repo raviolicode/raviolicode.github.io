@@ -13,6 +13,11 @@
     padding: 1em;
   }
 
+  /* We hide the avatar */
+  .splash img {
+    visibility: hidden;
+  }
+
   /* We use background image */
   .splash-container {
     /* TODO: use background */
