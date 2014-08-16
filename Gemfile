@@ -5,6 +5,7 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.2.1"
 gem "json"
 gem "haml"
+gem "bourbon"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 gem "redcarpet"
