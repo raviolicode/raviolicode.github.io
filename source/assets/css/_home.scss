@@ -1,3 +1,11 @@
+$red: #de5b28;
+$darkgray: #333;
+$lightgray: #c5d4cd;
+$mediumgray: #8e9994;
+$bluegray: #2d3e50;
+$bluegraycontrast: #aaa;
+$blue: rgba(113, 140, 135, 0.2);
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8,6 +16,19 @@
  */
 .pure-g, .pure-g [class*="pure-u"] {
   font-family: 'Raleway';
+  color: $darkgray;
+}
+
+h1 {
+  color: $red;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /*
@@ -32,11 +53,20 @@
  * Where it appears the name & picture
  */
 
+.splash-container {
+  background: $blue;
+  border-bottom: 10px solid $red;
+}
+
 .splash {
   // height: 50%;
   text-align: center;
-  width: 90%;
+  width: 80%;
   margin: auto;
+
+  h1 {
+    color: $darkgray;
+  }
 
   img {
     height: 200px;
@@ -44,3 +74,20 @@
   }
 }
 
+/*
+ * -- RIBBON STYLES --
+ * Where the contrast background appears
+ */
+
+.ribbon {
+  background-color: $darkgray;
+  .pure-g, .pure-g [class*="pure-u"] {
+    color: white;
+    font-family: 'Nunito';
+    font-weight: 300;
+  }
+
+  .l-box-lrg {
+    padding: 3em;
+  }
+}

@@ -8,14 +8,12 @@
     font-size: 16px;
   }
 
-  /* We want to give the content area some more padding */
-  .content {
-    padding: 1em;
-  }
-
   /* We hide the avatar */
-  .splash img {
-    visibility: hidden;
+  .splash {
+    width: 90%;
+    img {
+      visibility: hidden;
+    }
   }
 
   /* We use background image */
@@ -32,7 +30,7 @@
     h1 {
       font-size: 3.9em;
       line-height: 1em;
-      padding-bottom: 0.5em;
+      padding-bottom: 0em;
     }
 
     p {
@@ -44,17 +42,28 @@
     }
   }
 
-
-  .splash-head {
-    font-size: 250%;
+  /* Text shouldn't be too wide */
+  .splash .text {
+    max-width: 400px;
+    margin: auto;
   }
-
 
   /* We remove the border-separator assigned to .l-box-lrg */
   .l-box-lrg {
     border: none;
   }
 
+  /* about.me text in two columns */
+  .ribbon .text {
+    @include column-count(2);
+    @include column-gap(40px);
+  }
+}
+
+@media (min-width: 50em) {
+  .splash-container h1 {
+    padding-bottom: 0.5em;
+  }
 }
 
 /*
