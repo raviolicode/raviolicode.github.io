@@ -1,5 +1,84 @@
 ---
-title: Middleman on Pure CSS
+title: Lucia Escanellas
 ---
 
-%h1 This is to be filled
+-# %section.pure-g-r#hero
+.splash-container
+  .splash.pure-g
+    .l-box-lrg.is-center.pure-u-1.pure-u-md-1-2
+    .pure-u-1.pure-u-md-1-2
+      %h1
+        Hi, I'm Lucia
+        %strong Escanellas
+
+      %p I'm a Software Engineer, crazy about software development, fan of tarsiers.
+      %p
+        Check out some #{link_to 'info', '#info'} about me, 
+        some of my #{link_to 'interests', '#interests'}, and a few of my #{link_to 'skills', '#skills'}.
+        Or you can jump to my #{link_to 'contact', '#info'} info.
+
+-# %section#info
+.content-wrapper
+  .ribbon.content
+    .content-head
+      %h2 ~/about_me
+      .pure-g
+        .l-box.pure-u-1.pure-u-md-1-2
+          %p
+            My name is Lucia Escanellas, also known as raviolicode. I live in #{link_to 'Montevideo, Uruguay', '#'},
+            working at Neo, and a member of #{link_to 'DATA', 'http://github.com/datauy'}.
+          %p Engineer by profession, coder by choice, I believe in how doing "the right things the right way" can make a difference.
+          %p I love solving problems in all their forms. Setting up servers, defining architectures, coaching teams in agile methodologies, coding a usable front-end.
+        .l-box.pure-u-1.pure-u-md-1-2
+          %p But above all, seeing a project's success is what really drives me.
+          %p I have been fascinated by computers since I was 9, when there was only #{link_to "Xenix", "http://en.wikipedia.org/wiki/Xenix"} and DOS.
+          %p Started out as a Linux Sysadmin, and then a computer networks teacher at the University.
+          %p I also worked as a .NET Developer / Analyst. Then I discovered Ruby, and I have been working on Web Development ever since :)</p>
+
+  .content
+    .content-head
+      %h1 ~/my_interests
+
+      .pure-g
+        .pure-u-1.pure-u-sm-1-2.interest
+          %h2
+            Open Data
+            %br
+              &Digital
+            %br
+              Goverment
+          .content
+            %p Info about DATA
+
+        .pure-u-1.pure-u-sm-1-2.interest
+          %h2
+            Teaching
+            %br
+              & Work
+            %br
+              shops
+          .content
+            %ul
+              %li Rails Bridge 2012
+              %li Rails Girls Montevideo 2014
+
+        .pure-u-1.pure-u-sm-1-2.interest
+          %h2
+            Hacka
+            %br
+              thons
+            %br
+              Open Source
+          .content
+            %ul
+              %li Upsert
+              %li Desarrollando Latinoamérica
+
+        .pure-u-1.pure-u-sm-1-2.interest
+          %h2
+            Travels
+            %br
+              Creatures
+            %br
+              &Culture
+          %p Some other stuff
