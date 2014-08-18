@@ -2,7 +2,6 @@
  * -- TABLET (AND UP) MEDIA QUERIES --
  */
 @media (min-width: 48em) {
-
   /* We increase the body font size */
   body {
     font-size: 16px;
@@ -58,11 +57,28 @@
     @include column-count(2);
     @include column-gap(40px);
   }
+
+  .interest {
+    margin: 2em;
+  }
+
+  #interests {
+    font-size: 65%;
+  }
 }
 
 @media (min-width: 50em) {
   .splash-container h1 {
     padding-bottom: 0.5em;
+  }
+  #interests {
+    font-size: 71%;
+  }
+}
+
+@media (min-width: 60em) {
+  #interests {
+    font-size: 85%;
   }
 }
 
@@ -70,6 +86,9 @@
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  */
 @media (min-width: 78em) {
+  #interests {
+    font-size: 110%;
+  }
   /* We increase the header font size even more */
   .splash-head {
     font-size: 300%;

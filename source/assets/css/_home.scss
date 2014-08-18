@@ -1,10 +1,12 @@
 $red: #de5b28;
 $darkgray: #333;
 $lightgray: #c5d4cd;
+$lightergray: rgb(215, 232, 226);
 $mediumgray: #8e9994;
 $bluegray: #2d3e50;
 $bluegraycontrast: #aaa;
 $blue: rgba(113, 140, 135, 0.2);
+
 
 * {
   -webkit-box-sizing: border-box;
@@ -55,7 +57,7 @@ a {
 
 .splash-container {
   background: $lightgray;
-  border-bottom: 10px solid $red;
+  border-bottom: 0.625em solid $red;
 }
 
 .splash {
@@ -94,24 +96,32 @@ a {
  * -- INTERESTS STYLES --
  * 
  */
+// $interest_width: 30.625em;
+$interest_width: 31.271em;
+$interest_height: 13.19em;
 
 #interests {
-  background: $lightgray;
+  background-color: $lightgray;
 }
 
 .interest {
-  background: white;
+  background-color: $lightergray;
   position: relative;
-  width: 490px;
-  height: 250px;
+  width: $interest_width;
+  height: $interest_height;
   overflow: hidden;
+  margin: 2em auto;
 
   h2 {
     color: $mediumgray;
     text-transform: uppercase;
-    font-size: 5.6em;
     font-weight: 800;
-    letter-spacing: -1px;
+
+    letter-spacing: -0.024em;
+    font-size: 5.6em;
+    // alternative
+    // font-size: 5.78em;
+    // letter-spacing: -0.0625em;
     line-height: 0.8em;
     margin: 0;
 
@@ -125,40 +135,42 @@ a {
   &:hover .title {
     h2 {
       color: $darkgray;
-      z-index: 0;
+      -webkit-transition: color 500ms;
     }
-    -webkit-transform: translateX(-280px);
-  }
-
-  &:hover .content {
+    -webkit-transform: translateX(-17.5em);
     -webkit-transition: -webkit-transform 300ms;
-    -webkit-transform: skew(330deg) translateX(120px) translateY(-10px);
-    z-index: 0;
-    background-color: white;
-  }
-
-  &:hover .info {
-    -webkit-transform: skew(-330deg);
-    padding: 20px 0 0 20px;
   }
 
   .title {
-    background: white;
     position: absolute;
-    width: 490px;
-    height: 250px;
-    top: 0px;
+    top: 0;
+    width: $interest_width;
+    height: $interest_height;
+
+    h2 {
+      color: $mediumgray;
+      -webkit-transition: color 500ms;
+    }
+    -webkit-transition: -webkit-transform 300ms;
+  }
+
+  &:hover .content {
+    background-color: $lightergray;
+    -webkit-transform: skew(330deg) translateX(7.5em) translateY(-0.625em);
     -webkit-transition: -webkit-transform 300ms;
   }
 
   .content {
-    z-index: -9999;
-    overflow:hidden;
-    backround: white;
-    border-left: solid 10px $red;
+    overflow: hidden;
+    border-left: solid 0.625em $red;
     position: relative;
-    width: 500px;
-    height: 300px;
-    -webkit-transform: skew(330deg) translateX(600px) translateY(-10px);
+    height: $interest_height * 1.10;
+    -webkit-transform: skew(330deg) translateX(37.5em) translateY(-0.625em);
+    -webkit-transition: -webkit-transform 300ms;
+  }
+
+  &:hover .info {
+    -webkit-transform: skew(-330deg);
+    padding: 1.25em 0 0 1.25em;
   }
 }
