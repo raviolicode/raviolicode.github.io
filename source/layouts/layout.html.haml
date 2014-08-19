@@ -8,11 +8,11 @@
 %html{lang: 'en', class: 'no-js'}
   /<![endif]
   %head
-    %title #{data.page.title || "Welcome to Middleman"}
+    %title #{data.page.title || "Lucia Escanellas"}
     %meta(http-equiv="content-type" content="text/html" charset="utf-8")
     %meta(http-equiv="x-ua-compatible" content="ie=edge,chrome=1")
-    %meta(name="description" content="")
-    %meta(name="author" content="")
+    %meta(name="description" content="Lucia Escanellas website")
+    %meta(name="author" content="Lucia Escanellas")
     
     -# Standard viewport tag to set the viewport to the device's width, 
     -# Android 2.3 devices need this so 100% width works properly and 
@@ -24,11 +24,14 @@
     %meta(name='apple-mobile-web-app-capable' content='yes')
     %meta(name='apple-mobile-web-app-status-bar-style' content='translucent-black')
 
-    %link{:href=>'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', :rel=>'stylesheet', :type=>'text/css'}
+    -# %link{:href=>'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', :rel=>'stylesheet', :type=>'text/css'}
     %link{:href=>'http://fonts.googleapis.com/css?family=Raleway:400,300,600,700', :rel=>'stylesheet', :type=>'text/css'}
-    = javascript_include_tag "vendor/modernizr"
-    = stylesheet_link_tag "all"
+    = javascript_include_tag 'vendor/modernizr'
+    = stylesheet_link_tag 'all'
 
   %body{class: current_page.data.body_class || 'page'}
     = yield
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'
+    = javascript_include_tag 'vendor/jsnetworkx.js'
+    -# = javascript_include_tag 'vis.coffee'
     = javascript_include_tag 'app'

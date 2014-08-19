@@ -23,6 +23,8 @@ $blue: rgba(113, 140, 135, 0.2);
 
 h1 {
   color: $red;
+  font-size: 4em;
+  font-family: 'Raleway';
 }
 
 a {
@@ -85,10 +87,13 @@ a {
   background-color: $darkgray;
   .pure-g, .pure-g [class*="pure-u"] {
     color: white;
-    font-family: 'Nunito';
+    // font-family: 'Nunito';
     font-weight: 300;
   }
 
+  p {
+    font-size: 1.2em;
+  }
 }
 
 

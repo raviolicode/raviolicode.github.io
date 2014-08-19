@@ -1,4 +1,18 @@
 /*
+ * MOBILE
+ */
+
+@media (max-width: 37.5em) {
+  #aboutme h1 {
+    font-size: 50%;
+  }
+
+  #interests {
+    font-size: 50%;
+  }
+}
+
+/*
  * -- TABLET (AND UP) MEDIA QUERIES --
  */
 @media (min-width: 48em) {
