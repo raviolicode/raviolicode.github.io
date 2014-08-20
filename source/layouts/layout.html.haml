@@ -32,6 +32,5 @@
   %body{class: current_page.data.body_class || 'page'}
     = yield
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'
-    = javascript_include_tag 'vendor/jsnetworkx.js'
-    -# = javascript_include_tag 'vis.coffee'
-    = javascript_include_tag 'app'
+    = javascript_include_tag 'vendor/radar-chart.js'
+    = javascript_include_tag 'radar.js'
