@@ -136,6 +136,7 @@ var RadarChart = {
         })
             .style("font-family", "Raleway")
             .style("font-size", "1.5em")
+            .style("font-weight", "bold")
             .style("fill", "#fff")
             .attr("text-anchor", "middle")
             .attr("dy", "1.5em")
