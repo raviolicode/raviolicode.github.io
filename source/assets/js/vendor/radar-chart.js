@@ -177,20 +177,6 @@ var RadarChart = {
                 return cfg.color(series)
             })
                 .style("fill-opacity", cfg.opacityArea)
-                .on('mouseover', function (d) {
-                z = "polygon." + d3.select(this).attr("class");
-                g.selectAll("polygon")
-                    .transition(200)
-                    .style("fill-opacity", 0.1);
-                g.selectAll(z)
-                    .transition(200)
-                    .style("fill-opacity", .7);
-            })
-                .on('mouseout', function () {
-                g.selectAll("polygon")
-                    .transition(200)
-                    .style("fill-opacity", cfg.opacityArea);
-            });
             series++;
         });
         series = 0;
