@@ -20,7 +20,7 @@ var d = [
         axis: "Software Engineering",
         value: 0.80
     }, {
-        axis: "Performance / Optimization",
+        axis: "Performance",
         value: 0.65
     }]
 ];
@@ -39,3 +39,12 @@ var mycfg = {
 //Will expect that data is in %'s
 RadarChart.draw("#skills-graph", d, mycfg);
 
+var chart = $("#skills-graph svg"),
+    aspect = chart.width() / chart.height(),
+    container = chart.parent();
+
+$(window).on("resize", function() {
+    var targetWidth = container.width();
+    chart.attr("width", targetWidth);
+    chart.attr("height", Math.round(targetWidth / aspect));
+}).trigger("resize");

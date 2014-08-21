@@ -21,7 +21,7 @@ var RadarChart = {
             radians: 2 * Math.PI,
             opacityArea: 0.5,
             ToRight: 5,
-            TranslateX: 80,
+            TranslateX: 100,
             TranslateY: 30,
             ExtraWidthX: 100,
             ExtraWidthY: 100,
@@ -48,12 +48,16 @@ var RadarChart = {
         var Format = d3.format('%');
         d3.select(id).select("svg").remove();
 
+        var realWidthX = cfg.w + cfg.ExtraWidthX;
+        var realWidthY = cfg.h + cfg.ExtraWidthY;
         var g = d3.select(id)
             .append("svg")
-            .attr("width", cfg.w + cfg.ExtraWidthX)
-            .attr("height", cfg.h + cfg.ExtraWidthY)
+            .attr("width", realWidthX)
+            .attr("height", realWidthY)
+            .attr("viewBox", "0 0 " + realWidthX + " " + realWidthY)
+            .attr("perserveAspectRatio", "xMinYMid")
             .append("g")
-            .attr("transform", "translate(" + cfg.TranslateX + "," + cfg.TranslateY + ")");;
+            .attr("transform", "translate(" + cfg.TranslateX + "," + cfg.TranslateY + ")");
 
         var tooltip;
 
@@ -128,13 +132,13 @@ var RadarChart = {
         axis.append("text")
             .attr("class", "legend")
             .text(function (d) {
-              return d
+              return d;
         })
             .style("font-family", "Raleway")
             .style("font-size", "1.5em")
             .style("fill", "#fff")
             .attr("text-anchor", "middle")
-            .attr("dy", "1.5")
+            .attr("dy", "1.5em")
             .attr("transform", function (d, i) {
             return "translate(0, -10)"
         })
