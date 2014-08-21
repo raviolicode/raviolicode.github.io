@@ -9,4 +9,5 @@ gem "bourbon"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 gem "redcarpet"
+gem "middleman-deploy"
 
