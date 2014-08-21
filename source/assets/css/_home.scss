@@ -35,6 +35,10 @@ a {
   }
 }
 
+li {
+  list-style: none;
+}
+
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -63,7 +67,6 @@ a {
 }
 
 .splash {
-  // height: 50%;
   text-align: center;
   width: 80%;
   margin: auto;
@@ -177,5 +180,12 @@ $interest_height: 13.19em;
   &:hover .info {
     -webkit-transform: skew(-330deg);
     padding: 1.25em 0 0 1.25em;
+  }
+}
+
+#skills {
+  h2 {
+    color: $red;
+    font-weight: normal;
   }
 }
