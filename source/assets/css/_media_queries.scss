@@ -36,9 +36,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
-
     background-size: cover;
-    // height: 500px;
 
     h1 {
       font-size: 3.9em;
@@ -55,6 +53,13 @@
     }
   }
 
+  .interest {
+    margin: 0 auto 2em 0;
+    &.right {
+      margin: 0 0 2em auto;
+    }
+  }
+
   /* Text shouldn't be too wide */
   .splash {
     width: 100%;
@@ -63,11 +68,6 @@
       max-width: 26em;
       margin: auto;
     }
-  }
-
-  /* We remove the border-separator assigned to .l-box-lrg */
-  .l-box-lrg {
-    border: none;
   }
 
   /* about.me text in two columns */

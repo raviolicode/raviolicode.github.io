@@ -7,12 +7,13 @@ $bluegray: #2d3e50;
 $bluegraycontrast: #aaa;
 $blue: rgba(113, 140, 135, 0.2);
 
-
+// TODO: use Compass
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 /*
  * -- BASE STYLES --
  */
@@ -29,7 +30,7 @@ h1 {
 
 a {
   color: $red;
-  text-decoration: none;
+  // text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
@@ -51,13 +52,6 @@ section {
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
  */
-.l-box {
-  padding: 1em;
-}
-
-.l-box-lrg {
-  padding: 3em 0;
-}
 
 .is-center {
   text-align: center;
@@ -86,11 +80,16 @@ section {
 
   h1 {
     color: $darkgray;
+
+    & strong {
+      color: $red;
+    }
   }
 
   img {
     height: 200px;
     border-radius: 100px;
+    margin: 3em 0 0 0;
   }
 }
 
@@ -129,10 +128,7 @@ $interest_height: 13.19em;
   width: $interest_width;
   height: $interest_height;
   overflow: hidden;
-  margin: 0 auto 2em 0;
-  &.right {
-    margin: 0 0 2em auto;
-  }
+  margin: 0 0 2em 0;
 
   h2 {
     color: $mediumgray;

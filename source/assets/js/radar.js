@@ -32,7 +32,7 @@ var mycfg = {
     maxValue: 0.6,
     levels: 6,
     ExtraWidthX: 180,
-    TranslateX: 75,
+    TranslateX: 60,
     color: d3.scale.ordinal().range(["#de5b28"])
 }
 
