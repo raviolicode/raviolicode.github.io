@@ -39,6 +39,14 @@ li {
   list-style: none;
 }
 
+p {
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+section {
+  padding-bottom: 3em;
+}
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -48,12 +56,17 @@ li {
 }
 
 .l-box-lrg {
-  padding: 3em;
-  // border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 3em 0;
 }
 
 .is-center {
   text-align: center;
+}
+
+.pure-g {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 /*
@@ -95,17 +108,15 @@ li {
   }
 
   p {
-    font-size: 1.2em;
+    margin: 0 0 1em 0;
   }
 }
-
 
 /*
  * -- INTERESTS STYLES --
  * 
  */
-// $interest_width: 30.625em;
-$interest_width: 31.271em;
+$interest_width: calc(100% - 2em);
 $interest_height: 13.19em;
 
 #interests {
@@ -118,7 +129,10 @@ $interest_height: 13.19em;
   width: $interest_width;
   height: $interest_height;
   overflow: hidden;
-  margin: 2em auto;
+  margin: 0 auto 2em 0;
+  &.right {
+    margin: 0 0 2em auto;
+  }
 
   h2 {
     color: $mediumgray;
@@ -145,7 +159,7 @@ $interest_height: 13.19em;
       color: $darkgray;
       -webkit-transition: color 500ms;
     }
-    -webkit-transform: translateX(-17.5em);
+    -webkit-transform: translateX(-98%);
     -webkit-transition: -webkit-transform 300ms;
   }
 
@@ -164,7 +178,7 @@ $interest_height: 13.19em;
 
   &:hover .content {
     background-color: $lightergray;
-    -webkit-transform: skew(330deg) translateX(7.5em) translateY(-0.625em);
+    -webkit-transform: skew(330deg) translateX(10.5%) translateY(-0.625em);
     -webkit-transition: -webkit-transform 300ms;
   }
 
@@ -173,7 +187,7 @@ $interest_height: 13.19em;
     border-left: solid 0.625em $red;
     position: relative;
     height: $interest_height * 1.10;
-    -webkit-transform: skew(330deg) translateX(37.5em) translateY(-0.625em);
+    -webkit-transform: skew(330deg) translateX(120%) translateY(-0.625em);
     -webkit-transition: -webkit-transform 300ms;
   }
 

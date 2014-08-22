@@ -1,4 +1,4 @@
-var w = 400,
+var w = 580,
     h = 400;
 
 //Data
@@ -31,7 +31,8 @@ var mycfg = {
     h: h,
     maxValue: 0.6,
     levels: 6,
-    ExtraWidthX: 300,
+    ExtraWidthX: 180,
+    TranslateX: 75,
     color: d3.scale.ordinal().range(["#de5b28"])
 }
 

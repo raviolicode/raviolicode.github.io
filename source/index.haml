@@ -17,8 +17,8 @@ title: Lucia Escanellas
         some of my #{link_to 'interests', '#interests'}, and a few of my #{link_to 'skills', '#skills'}.
         Or you can jump to my #{link_to 'contact', '#info'} info.
 
-#aboutme.ribbon
-  .pure-g.l-box-lrg
+%section#aboutme.ribbon
+  .pure-g
     .pure-u-1
       %h1 ~/about_me
     .pure-u-1.text
@@ -32,7 +32,7 @@ title: Lucia Escanellas
       %p Started out as a Linux Sysadmin, and then a computer networks teacher at the University.
       %p I also worked as a .NET Developer / Analyst. Then I discovered Ruby, and I have been working on Web Development ever since :)</p>
 
-#interests
+%section#interests
   .pure-g.l-box-lrg
     .pure-u-1
       %h1 ~/my_interests
@@ -88,44 +88,25 @@ title: Lucia Escanellas
           .info
             %p Some other stuff
 
-#skills.ribbon.l-box-lrg
-  %h1 ~/skills
+%section#skills.ribbon
   .pure-g
+    .pure-u-1
+      %h1 ~/skills
     .pure-u-1.pure-u-md-2-3
       #skills-graph
-    .skills-list.pure-u-1.pure-u-md-1-3
-      %h2 Backend
-      %ul
-        %li Ruby on Rails
-        %li Sinatra
-      %h2 Frontend
-      %ul
-        %li CSS 3
-        %li HTML 5
-        %li Angular
-      %h2 Languages
-      %ul
-        %li Ruby
-        %li JavaScript
-        %li Scala (learning)
-      %h2 Databases
-      %ul
-        %li PostgreSQL
-        %li MySQL
-        %li MongoDB
-      %h2 Methodologies
-      %ul
-        %li Lean Validation
-        %li Scrum / XP
-        %li TDD
-        %li Continuous Delivery
-      %h2 Dev Ops
-      %ul
-        %li Debian / Ubuntu
-        %li RedHat / CentOS
-        %li Ansible
-        %li Capistrano
-        %li Heroku
-        %li Amazon S3, EC2
+    .pure-u-1.pure-u-md-1-3
+      .skills-list
+        %h2 Backend
+        %p Ruby on Rails, Sinatra
+        %h2 Frontend
+        %p CSS 3, HTML 5, Angular
+        %h2 Languages
+        %p Ruby, JavaScript, Scala (learning)
+        %h2 Databases
+        %p PostgreSQL, MySQL, MongoDB
+        %h2 Methodologies
+        %p Lean Validation, Scrum, XP, TDD, Continuous Delivery
+        %h2 Dev Ops
+        %p Debian, Ubuntu, RedHat, CentOS, Ansible, Capistrano, Heroku, Amazon S3, EC2
 
 
