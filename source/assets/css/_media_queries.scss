@@ -45,11 +45,11 @@
     }
 
     p {
-      font-size: 1.4em;
+      // font-size: 1.4em;
       // max-width: 18em;
       font-weight: 400;
-      line-height: 1.2em;
-      padding-left: 5px;
+      // line-height: 1.2em;
+      // padding-left: 5px;
     }
   }
 
@@ -64,8 +64,7 @@
   .splash {
     width: 100%;
     .text {
-      font-size: 90%;
-      max-width: 26em;
+      max-width: 25em;
       margin: auto;
     }
   }
@@ -74,6 +73,7 @@
   .ribbon .text {
     @include column-count(2);
     @include column-gap(40px);
+    @include column-fill(balance);
   }
 
   #interests {
@@ -101,15 +101,16 @@
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  */
 @media (min-width: 78em) {
-  body {
-    font-size: 18px;
-  }
+    body {
+      font-size: 20px;
+    }
+//
+//   /* We increase splash font size even more */
+//   .splash .text{
+//     font-size: 110%;
+//   }
 
-  /* We increase splash font size even more */
-  .splash .text{
-    font-size: 110%;
-  }
-
+  /* Min width to see the image */
   .splash-container {
     min-height: 600px;
   }

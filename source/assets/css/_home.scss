@@ -24,7 +24,7 @@ $blue: rgba(113, 140, 135, 0.2);
 
 h1 {
   color: $red;
-  font-size: 4em;
+  font-size: 3.9em;
   font-family: 'Raleway';
 }
 
@@ -42,7 +42,6 @@ li {
 
 p {
   line-height: 1.5em;
-  font-size: 1.2em;
 }
 
 section {
@@ -90,6 +89,10 @@ section {
     height: 200px;
     border-radius: 100px;
     margin: 3em 0 0 0;
+  }
+
+  p {
+    font-size: 1.4em;
   }
 }
 
