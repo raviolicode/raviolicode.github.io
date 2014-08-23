@@ -47,6 +47,10 @@ p {
 section {
   padding-bottom: 3em;
 }
+
+strong {
+  color: $red;
+}
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -80,9 +84,6 @@ section {
   h1 {
     color: $darkgray;
 
-    & strong {
-      color: $red;
-    }
   }
 
   img {
@@ -118,7 +119,7 @@ section {
  * -- INTERESTS STYLES --
  * 
  */
-$interest_width: calc(100% - 2em);
+$interest_width: 100%;
 $interest_height: 13.19em;
 
 #interests {
