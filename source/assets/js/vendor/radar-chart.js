@@ -135,21 +135,22 @@ var RadarChart = {
               return d;
         })
             .style("font-family", "Raleway")
-            .style("font-size", "1.5em")
+            .style("font-size", "1em")
             .style("font-weight", "bold")
             .style("fill", "#fff")
             .attr("text-anchor", "middle")
             .attr("dy", "1.5em")
             .attr("transform", function (d, i) {
-            return "translate(0, -10)"
+            return "translate(10, -20)"
         })
             .attr("x", function (d, i) {
-            return cfg.w / 2 * (1 - cfg.factorLegend * Math.sin(i * cfg.radians / total)) - 60 * Math.sin(i * cfg.radians / total);
+            return cfg.w / 2 * (1 - cfg.factorLegend * Math.sin(i * cfg.radians / total) * 1.1) - 60 * Math.sin(i * cfg.radians / total);
         })
             .attr("y", function (d, i) {
-            return cfg.h / 2 * (1 - Math.cos(i * cfg.radians / total)) - 20 * Math.cos(i * cfg.radians / total);
+            return cfg.h / 2 * (1 - Math.cos(i * cfg.radians / total) * 1.02) - 20 * Math.cos(i * cfg.radians / total);
         });
 
+        axis.selectAll(".axis text").call(wrap, 170);
 
         d.forEach(function (y, x) {
             dataValues = [];
@@ -182,7 +183,6 @@ var RadarChart = {
         });
         series = 0;
 
-
         d.forEach(function (y, x) {
             g.selectAll(".nodes")
                 .data(y).enter()
@@ -209,11 +209,11 @@ var RadarChart = {
                 newX = parseFloat(d3.select(this).attr('cx')) - 10;
                 newY = parseFloat(d3.select(this).attr('cy')) - 5;
 
-                tooltip.attr('x', newX)
-                    .attr('y', newY)
-                    .text(Format(d.value))
-                    .transition(200)
-                    .style('opacity', 1);
+                // tooltip.attr('x', newX)
+                //     .attr('y', newY)
+                //     .text(Format(d.value))
+                //     .transition(200)
+                //     .style('opacity', 1);
 
                 z = "polygon." + d3.select(this).attr("class");
                 g.selectAll("polygon")
@@ -223,13 +223,13 @@ var RadarChart = {
                     .transition(200)
                     .style("fill-opacity", .7);
             })
-                .on('mouseout', function () {
-                tooltip.transition(200)
-                    .style('opacity', 0);
-                g.selectAll("polygon")
-                    .transition(200)
-                    .style("fill-opacity", cfg.opacityArea);
-            })
+            //     .on('mouseout', function () {
+            //     tooltip.transition(200)
+            //         .style('opacity', 0);
+            //     g.selectAll("polygon")
+            //         .transition(200)
+            //         .style("fill-opacity", cfg.opacityArea);
+            // })
                 .append("svg:title")
                 .text(function (j) {
                 return Math.max(j.value, 0)
@@ -238,10 +238,35 @@ var RadarChart = {
             series++;
         });
         //Tooltip
-        tooltip = g.append('text')
-            .style('opacity', 0)
-            .style('font-family', 'sans-serif')
-            .style('font-size', '13px');
+        // tooltip = g.append('text')
+        //     .style('opacity', 0)
+        //     .style('font-family', 'sans-serif')
+        //     .style('font-size', '13px');
     }
 };
 
+/* Extracted from http://bl.ocks.org/mbostock/7555321 */
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("x"),
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
