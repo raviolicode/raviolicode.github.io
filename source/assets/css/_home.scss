@@ -107,7 +107,6 @@ strong {
   background-color: $darkgray;
   .pure-g, .pure-g [class*="pure-u"] {
     color: white;
-    // font-family: 'Nunito';
     font-weight: 300;
   }
 
@@ -199,5 +198,22 @@ $interest_height: 13.19em;
   h2 {
     color: $red;
     font-weight: normal;
+  }
+}
+
+footer {
+  background-color: $lightgray;
+  font-size: 3em;
+  padding: 0.4em 0;
+
+  a {
+    color: $mediumgray;
+    transition: color 0.5s;
+    text-decoration: none;
+
+    &:hover {
+      color: $darkgray;
+      transition: color 0.5s;
+    }
   }
 }
