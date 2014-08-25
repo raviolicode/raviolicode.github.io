@@ -155,10 +155,10 @@ $interest_height: 13.19em;
   &:hover .title {
     h2 {
       color: $darkgray;
-      -webkit-transition: color 500ms;
+      @include transition(color 500ms);
     }
-    -webkit-transform: translateX(-98%);
-    -webkit-transition: -webkit-transform 300ms;
+    @include transform(translateX(-98%));
+    @include transition(transform 300ms);
   }
 
   .title {
@@ -166,17 +166,19 @@ $interest_height: 13.19em;
     top: 0;
     width: $interest_width;
     height: $interest_height;
+    @include transform(translateX(0));
+    @include transition(transform 300ms);
 
     h2 {
       color: $mediumgray;
-      -webkit-transition: color 500ms;
+      @include transition(color 500ms);
     }
   }
 
   &:hover .content {
     background-color: $lightergray;
-    -webkit-transform: skew(330deg) translateX(10.5%) translateY(-0.625em);
-    -webkit-transition: -webkit-transform 300ms;
+    @include transform(skew(330deg) translateX(10.5%) translateY(-0.625em));
+    @include transition(-webkit-transform 500ms);
   }
 
   .content {
@@ -184,12 +186,12 @@ $interest_height: 13.19em;
     border-left: solid 0.625em $red;
     position: relative;
     height: $interest_height * 1.10;
-    -webkit-transform: skew(330deg) translateX(120%) translateY(-0.625em);
-    -webkit-transition: -webkit-transform 300ms;
+    @include transform(skew(330deg) translateX(120%) translateY(-0.625em));
+    @include transition(-webkit-transform 500ms);
   }
 
   &:hover .info {
-    -webkit-transform: skew(-330deg);
+    @include transform(skew(-330deg));
     padding: 1.25em 0 0 1.25em;
   }
 }
@@ -209,12 +211,12 @@ footer {
 
   a {
     color: $mediumgray;
-    transition: color 0.5s;
+    @include transition(color 0.5s);
     text-decoration: none;
 
     &:hover {
       color: $darkgray;
-      transition: color 0.5s;
+      @include transition(color 0.5s);
     }
   }
 }
