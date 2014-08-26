@@ -110,14 +110,22 @@
     font-size: 20px;
   }
 
-  /* Min width to see the image */
-  .splash-container {
-    min-height: 600px;
-  }
 
   /* radar shouldn't get too big */
   #skills-graph {
     max-width: 700px;
     margin: 0 auto;
   }
+}
+
+@media (min-width: 90em) {
+  /* Min width to see the image */
+  .splash-container {
+    background-image: image-url('me.jpg');
+    min-height: 1000px;
+    .text {
+      padding-top: 6em;
+    }
+  }
+
 }
