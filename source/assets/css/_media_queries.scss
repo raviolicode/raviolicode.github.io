@@ -26,15 +26,14 @@
   /* We hide the avatar */
   .splash {
     text-align: right;
-    img {
-      visibility: hidden;
-    }
+    padding-top: 3em;
   }
 
   /* We use background image */
   .splash-container {
     /* TODO: use background */
     background-image: image-url('me.jpg');
+    height: 600px;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
@@ -44,6 +43,10 @@
       font-size: 3.9em;
       line-height: 1em;
       padding-bottom: 0em;
+    }
+
+    img {
+      display: none;
     }
 
     p {
@@ -103,14 +106,9 @@
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  */
 @media (min-width: 78em) {
-    body {
-      font-size: 20px;
-    }
-//
-//   /* We increase splash font size even more */
-//   .splash .text{
-//     font-size: 110%;
-//   }
+  body {
+    font-size: 20px;
+  }
 
   /* Min width to see the image */
   .splash-container {
@@ -122,5 +120,4 @@
     max-width: 700px;
     margin: 0 auto;
   }
-
 }

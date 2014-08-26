@@ -74,6 +74,10 @@ strong {
 .splash-container {
   background: $lightgray;
   border-bottom: 0.625em solid $red;
+
+  img {
+    width: 100%;
+  }
 }
 
 .splash {
@@ -83,12 +87,6 @@ strong {
   h1 {
     color: $darkgray;
 
-  }
-
-  img {
-    height: 200px;
-    border-radius: 100px;
-    margin: 3em 0 0 0;
   }
 
   p {
