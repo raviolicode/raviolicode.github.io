@@ -118,6 +118,7 @@ strong {
  */
 $interest_width: 100%;
 $interest_height: 13.19em;
+$interval: 700ms;
 
 #interests {
   background-color: $lightgray;
@@ -151,10 +152,10 @@ $interest_height: 13.19em;
   &:hover .title {
     h2 {
       color: $darkgray;
-      @include transition(color 500ms);
+      @include transition(color $interval);
     }
     @include transform(translateX(-98%));
-    @include transition(transform 300ms);
+    @include transition(transform $interval);
   }
 
   .title {
@@ -163,32 +164,39 @@ $interest_height: 13.19em;
     width: $interest_width;
     height: $interest_height;
     @include transform(translateX(0));
-    @include transition(transform 300ms);
+    @include transition(transform $interval);
 
     h2 {
       color: $mediumgray;
-      @include transition(color 500ms);
+      @include transition(color $interval);
     }
   }
 
   &:hover .content {
     background-color: $lightergray;
-    @include transform(skew(330deg) translateX(10.5%) translateY(-0.625em));
-    @include transition(-webkit-transform 500ms);
+    @include transform(skew(330deg) translateX(10.5%));
+    @include transition(transform $interval);
   }
 
   .content {
+    text-align: right;
     overflow: hidden;
     border-left: solid 0.625em $red;
     position: relative;
     height: $interest_height * 1.10;
-    @include transform(skew(330deg) translateX(120%) translateY(-0.625em));
-    @include transition(-webkit-transform 500ms);
+    @include transform(skew(330deg) translateX(120%));
+    @include transition(transform $interval);
+  }
+
+  .info {
+    width: 70%;
+    padding: 1.25em 0 0 1.25em;
+    @include transform(skew(-330deg));
   }
 
   &:hover .info {
-    @include transform(skew(-330deg));
     padding: 1.25em 0 0 1.25em;
+    @include transform(skew(-330deg));
   }
 }
 
