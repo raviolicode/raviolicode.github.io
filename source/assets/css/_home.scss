@@ -186,6 +186,9 @@ $interval: 700ms;
     height: $interest_height * 1.10;
     @include transform(skew(330deg) translateX(120%));
     @include transition(transform $interval);
+    li {
+      padding-bottom: 0.5em;
+    }
   }
 
   .info {
