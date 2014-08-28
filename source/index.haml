@@ -2,7 +2,7 @@
 title: Lucia Escanellas
 ---
 
-%section.splash-container
+%section#hero.splash-container
   %img{src: image_path('avatar.jpg')}
   .splash.pure-g
     .pure-u-1.pure-u-md-1-2
@@ -13,9 +13,9 @@ title: Lucia Escanellas
 
       %p I'm a Software Engineer, crazy about software development, fan of tarsiers.
       %p
-        Check out some #{link_to 'info', '#info'} about me,
+        Check out some #{link_to 'info', '#aboutme'} about me,
         some of my #{link_to 'interests', '#interests'}, and a few of my #{link_to 'skills', '#skills'}.
-        Or you can jump to my #{link_to 'contact', '#info'} info.
+        Or you can jump to my #{link_to 'contact', '#contact'} info.
 
 %section#aboutme.ribbon
   .pure-g
@@ -145,7 +145,7 @@ title: Lucia Escanellas
           %strong Dev Ops:
           Debian, Ubuntu, RedHat, CentOS, Ansible, Capistrano, Heroku, Amazon S3, EC2
 
-%footer
+%footer#contact
   .pure-g.is-center
     .pure-u-1-2.pure-u-md-1-6
       %a{:href => "http://github.com/raviolicode"}
