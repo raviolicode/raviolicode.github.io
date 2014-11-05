@@ -11,6 +11,6 @@ I really like its simplicity, and ease of use with Middleman.
 
 ## License and Acknowledgements
 
-Feel free to use this as a base for your own site! ^^
+Feel free to use this as a base for your own site ^^
 
-Thanks to [@Chardot](https://www.twitter.com/chardot) for the design of this site!
+Thanks to [@Chardot](https://www.twitter.com/chardot) for the design.
